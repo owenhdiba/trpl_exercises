@@ -1,0 +1,8 @@
+[workspace]
+resolver = "3"
+members = [
+    "minigrep",
+    "pig_latin",
+    "vec_med_mode",
+    "add_employee"
+]
