@@ -1,4 +1,5 @@
-This repository contains solutions to some of the coding exercisees suggested in
+# *The Rust Programming Language*: Exercise Solutions
+This repository contains solutions to some of the coding exercises suggested in
 *The Rust Programming Language*. 
 
 ## Included Crates
@@ -38,4 +39,26 @@ This repository contains solutions to some of the coding exercisees suggested in
     It is mostly the same as the code given in the book other than how case
     insensitive search is selected - I use a CLI argument rather than an
     environment variable.
+## Usage
 
+Before running any of the CLI tools in this repository, make sure you have [Rust installed](https://www.rust-lang.org/tools/install).  
+
+### Running a crate
+From the repository root, you can build and run a specific crate with:
+
+```bash
+cargo run -p <CRATE_NAME> [ARGS...]
+```
+
+Replace `<CRATE_NAME>` with the name of the crate you want to run, and provide any arguments after it.  
+
+### Viewing documentation
+To generate and open the documentation for a crate’s libraries, run:
+
+```bash
+cargo doc -p <CRATE_NAME> --open
+```
+
+This will build the docs and open them in your default browser.  
+
+Documentation for the CLI tools themselves (rather than their libraries) can be found in the `README.md` file within each crate’s folder.  
