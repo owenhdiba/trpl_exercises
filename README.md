@@ -1,6 +1,6 @@
 # *The Rust Programming Language*: Exercise Solutions
 This repository contains solutions to some of the coding exercises suggested in
-*The Rust Programming Language*. 
+[*The Rust Programming Language*](https://doc.rust-lang.org/book/). 
 
 ## Included Crates
 
@@ -61,4 +61,30 @@ cargo doc -p <CRATE_NAME> --open
 
 This will build the docs and open them in your default browser.  
 
-Documentation for the CLI tools themselves (rather than their libraries) can be found in the `README.md` file within each crate’s folder.  
+Documentation for the CLI tools themselves (rather than their libraries) can be
+found in the `README.md` file within each crate’s folder.  
+
+### Running Unit Tests
+
+To execute unit tests on all crates run:
+
+```
+cargo test
+```
+from the root directory. To run unit tests on a particular crate run: 
+```
+cargo test -p <CRATE_NAME>
+```
+from the root directoy or run `cargo test` from within the crate's own directory.
+
+### Pre-commit Hook
+This repository includes a pre-commit hook that runs `cargo fmt` (to format the
+code according to Rust’s style guidelines), `cargo clippy` (to warn of going
+against best practices)  and `cargo test`
+(to ensure all tests pass) before allowing a commit.
+
+Make sure you have [pre-commit](https://pre-commit.com) installed and the hooks set up by running:
+```
+pre-commit install
+```
+This helps keep the codebase consistent and prevents commits that would break tests.
