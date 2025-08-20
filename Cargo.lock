@@ -15,5 +15,5 @@ name = "pig_latin"
 version = "0.1.0"
 
 [[package]]
-name = "vec-med-mode"
+name = "vec_med_mode"
 version = "0.1.0"
